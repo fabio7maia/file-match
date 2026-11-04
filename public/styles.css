@@ -1,0 +1,74 @@
+:root {
+  color-scheme: light dark;
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  line-height: 1.5;
+}
+
+body {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 1.5rem;
+}
+
+h1 {
+  margin-bottom: 0.25rem;
+}
+
+section {
+  margin-top: 1.75rem;
+}
+
+.hint {
+  opacity: 0.75;
+  font-size: 0.9rem;
+}
+
+.table-wrap {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+th,
+td {
+  padding: 0.4rem 0.6rem;
+  border-bottom: 1px solid #8884;
+  text-align: left;
+  vertical-align: top;
+}
+
+td.status-ok {
+  color: #1a7f37;
+  font-weight: 600;
+}
+
+td.status-error,
+td.status-conflict {
+  color: #cf222e;
+  font-weight: 600;
+}
+
+td.status-skipped {
+  opacity: 0.6;
+}
+
+button {
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+footer {
+  margin-top: 2.5rem;
+  font-size: 0.85rem;
+  opacity: 0.75;
+}

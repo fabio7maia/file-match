@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="pt-PT">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Elyvan FileMatch</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Elyvan FileMatch</h1>
+      <p>Renomeie vários ficheiros de uma só vez a partir de uma lista Excel ou CSV.</p>
+    </header>
+
+    <main>
+      <section>
+        <h2>1. Escolha os ficheiros</h2>
+        <input id="files" type="file" multiple />
+      </section>
+
+      <section>
+        <h2>2. Escolha a lista (Excel ou CSV)</h2>
+        <p class="hint">
+          Primeira coluna: referência (nome do ficheiro sem extensão). Segunda coluna: novo nome.
+          Pode incluir cabeçalhos "Referência" e "Novo nome".
+        </p>
+        <input id="list" type="file" accept=".csv,.txt,.xlsx,.xlsm" />
+        <p id="listInfo" class="hint"></p>
+      </section>
+
+      <section>
+        <h2>3. Confirme a pré-visualização</h2>
+        <p id="summary"></p>
+        <ul id="issues"></ul>
+        <p id="empty" class="hint">Escolha ficheiros e uma lista para ver a pré-visualização.</p>
+        <div class="table-wrap">
+          <table id="preview" hidden>
+            <thead>
+              <tr>
+                <th>Ficheiro original</th>
+                <th>Referência</th>
+                <th>Novo nome</th>
+                <th>Estado</th>
+                <th>Mensagem</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </section>
+
+      <section>
+        <h2>4. Descarregue o ZIP</h2>
+        <p class="hint">
+          Os originais não são alterados: o ZIP contém apenas cópias renomeadas dos ficheiros prontos.
+        </p>
+        <button id="download" type="button" disabled>Descarregar ZIP</button>
+        <p id="status" role="status"></p>
+      </section>
+    </main>
+
+    <footer>
+      Funciona localmente no navegador: os ficheiros não são enviados para nenhum servidor.
+      Compra única de referência: 5 €, sem subscrição.
+    </footer>
+
+    <script type="module" src="/app.js"></script>
+  </body>
+</html>
