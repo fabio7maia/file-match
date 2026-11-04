@@ -1,0 +1,15 @@
+{
+  "name": "elyvan-filematch",
+  "version": "1.0.0",
+  "description": "Renomeia vários ficheiros de uma só vez com base numa lista Excel ou CSV. Funciona localmente no navegador.",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "start": "node scripts/serve.js",
+    "test": "node --test \"test/**/*.test.js\""
+  },
+  "license": "UNLICENSED"
+}
